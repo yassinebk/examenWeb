@@ -65,7 +65,7 @@ class EtudiantController extends AbstractController
                 return $this->redirectToRoute('app_etudiant');
             }
             return $this->render('etudiant_form.html.twig',[
-                'form'=>$form
+                'form'=>$form->createView()
             ]);
         }
         return $this->redirectToRoute('app_etudiant');
