@@ -22,8 +22,10 @@
             <td>Etudiant Non affecte a une section</td>
             {% else %}
             <td>{{ etudiant.section.designation }}</td>
+
             {% endif %}
-            <td>@mdo</td>
+                <td><a class="btn btn-error" href="{{ path("app_etudiant_delete",{"id":etudiant.id}) }}">DELETE</a> </td>
+            <td><a class="btn btn-error" href="{{ path("app_etudiant_edit",{"id":etudiant.id}) }}">Edit</a> </td>
         </tr>
     {% endfor %}
         </tbody>
