@@ -24,7 +24,7 @@ class EtudiantController extends AbstractController
     }
 
 
-    #[Route('/etudiant/add', name: 'app_etudiant_add')]
+    #[Route('/add', name: 'app_etudiant_add')]
     public function ajoutEtudiant(EntityManagerInterface $em, Request $request)
     {
         $etudiant = new Etudiant();
@@ -43,7 +43,7 @@ class EtudiantController extends AbstractController
     }
 
 
-    #[Route('/etudiant/delete/{id}', name: 'app_etudiant_add')]
+    #[Route('/etudiant/delete/{id}', name: 'app_etudiant_delete')]
     public function deleteEtudiant(Etudiant $etudiant = null, EntityManagerInterface $entityManager)
     {
         if (isset($etudiant)) {
@@ -53,7 +53,7 @@ class EtudiantController extends AbstractController
         return $this->redirectToRoute('app_etudiant');
     }
 
-    #[Route('/etudiant/edit/{id}', name: 'app_etudiant_add')]
+    #[Route('/etudiant/edit/{id}', name: 'app_etudiant_edit')]
     public function editEtudiant(Etudiant $etudiant = null, EntityManagerInterface $entityManager,Request $request)
     {
         if(isset($etudiant)){
