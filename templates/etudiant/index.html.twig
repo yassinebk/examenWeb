@@ -10,6 +10,7 @@
             <th scope="col">#</th>
             <th scope="col">Nom</th>
             <th scope="col">Prenom</th>
+            <th scope="col">Section</th>
             <th scope="col">Actions</th>
         </tr>
         </thead>
@@ -24,8 +25,8 @@
             <td>{{ etudiant.section.designation }}</td>
 
             {% endif %}
-                <td><a class="btn btn-error" href="{{ path("app_etudiant_delete",{"id":etudiant.id}) }}">DELETE</a> </td>
-            <td><a class="btn btn-error" href="{{ path("app_etudiant_edit",{"id":etudiant.id}) }}">Edit</a> </td>
+                <td><a class="btn btn-danger" href="{{ path("app_etudiant_delete",{"id":etudiant.id}) }}">DELETE</a> </td>
+            <td><a class="btn btn-info" href="{{ path("app_etudiant_edit",{"id":etudiant.id}) }}">Edit</a> </td>
         </tr>
     {% endfor %}
         </tbody>
